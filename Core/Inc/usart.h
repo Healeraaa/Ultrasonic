@@ -37,6 +37,7 @@ extern "C" {
 /* USER CODE END Private defines */
 
 void MX_USART1_UART_Init(void);
+uint8_t USART1_ReceiveByte(void);
 
 /* USER CODE BEGIN Prototypes */
 

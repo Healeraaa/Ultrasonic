@@ -62,3 +62,4 @@ freertos\ultrasonic.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h
 freertos\ultrasonic.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_spi.h
 freertos\ultrasonic.o: ../Core/Inc/PWM1.h
 freertos\ultrasonic.o: ..\SYSTEM\delay.h
+freertos\ultrasonic.o: ../Core/Inc/usart.h

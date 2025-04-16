@@ -29,7 +29,16 @@ Project File Date:  04/01/2025
 Build target 'LVGL'
 Note: source file '..\Tasks\Src\User_UltrasonicrxTask.c' - object file renamed from 'FreeRTOS\User_UltrasonicrxTask.o' to 'FreeRTOS\user_ultrasonicrxtask_1.o'.
 Note: source file '..\Tasks\Src\User_UltrasonicrxTask.c' - object file renamed from 'FreeRTOS\User_UltrasonicrxTask.o' to 'FreeRTOS\user_ultrasonicrxtask_1.o'.
-"FreeRTOS\FreeRTOS.axf" - 0 Error(s), 0 Warning(s).
+compiling main.c...
+../Core/Src/main.c(71): warning:  #223-D: function "MX_FREERTOS_Init" declared implicitly
+    MX_FREERTOS_Init();    // ä»?åŠ?åˆ?å§?åŒ?
+../Core/Src/main.c: 1 warning, 0 errors
+linking...
+FreeRTOS\FreeRTOS.axf: Warning: L6304W: Duplicate input file freertos\user_ultrasonicrxtask_1.o ignored.
+Program Size: Code=17232 RO-data=15092 RW-data=208 ZI-data=19744  
+Finished: 0 information, 1 warning and 0 error messages.
+FromELF: creating hex file...
+"FreeRTOS\FreeRTOS.axf" - 0 Error(s), 2 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -51,7 +60,7 @@ Package Vendor: Keil
 <h2>Collection of Component Files used:</h2>
 
    * Component: ARM::CMSIS:CORE@6.1.0
-Build Time Elapsed:  00:00:01
+Build Time Elapsed:  00:00:04
 </pre>
 </body>
 </html>

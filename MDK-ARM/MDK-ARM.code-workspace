@@ -31,7 +31,8 @@
             "freertos.h": "c",
             "user_ultrasonicrxtask.h": "c",
             "lcd.h": "c",
-            "led.h": "c"
+            "led.h": "c",
+            "usart.h": "c"
         }
     },
     "extensions": {}

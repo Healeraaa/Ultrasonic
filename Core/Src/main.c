@@ -33,10 +33,10 @@ int main(void)
   SystemClock_Config();
 
   MX_GPIO_Init();
-  // MX_USART1_UART_Init();
+ 
   /* USER CODE BEGIN 2 */
   delay_init(168);
-
+  // MX_USART1_UART_Init();
 
 
 

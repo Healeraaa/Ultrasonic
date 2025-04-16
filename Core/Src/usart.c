@@ -53,10 +53,14 @@ void MX_USART1_UART_Init(void)
   GPIO_InitStruct.Alternate = LL_GPIO_AF_7;
   LL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
+  /* USART1 interrupt Init */
+  NVIC_SetPriority(USART1_IRQn, NVIC_EncodePriority(NVIC_GetPriorityGrouping(),0, 0));
+  NVIC_EnableIRQ(USART1_IRQn);
+
   /* USER CODE BEGIN USART1_Init 1 */
 
   /* USER CODE END USART1_Init 1 */
-  USART_InitStruct.BaudRate = 115200;
+  USART_InitStruct.BaudRate = 100;
   USART_InitStruct.DataWidth = LL_USART_DATAWIDTH_8B;
   USART_InitStruct.StopBits = LL_USART_STOPBITS_1;
   USART_InitStruct.Parity = LL_USART_PARITY_NONE;
@@ -67,11 +71,24 @@ void MX_USART1_UART_Init(void)
   LL_USART_ConfigAsyncMode(USART1);
   LL_USART_Enable(USART1);
   /* USER CODE BEGIN USART1_Init 2 */
+  LL_USART_EnableIT_RXNE(USART1);
+  // LL_USART_EnableIT_IDLE(USART1);//ç”¨äº†ä¼šå¡æ­»ä¸­æ–?
 
   /* USER CODE END USART1_Init 2 */
 
-}
 
+}
+uint8_t USART1_ReceiveByte(void)
+{
+    // 检查并清除溢出错误
+    if(LL_USART_IsActiveFlag_ORE(USART1)) {
+        LL_USART_ClearFlag_ORE(USART1);
+        (void)LL_USART_ReceiveData8(USART1); // 读取残留数据
+    }
+    
+    while(!LL_USART_IsActiveFlag_RXNE(USART1)) {} // 等待新数据
+    return LL_USART_ReceiveData8(USART1);
+}
 /* USER CODE BEGIN 1 */
 int fputc(int ch,FILE *f)
 {

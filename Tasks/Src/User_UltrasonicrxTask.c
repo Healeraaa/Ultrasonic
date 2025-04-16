@@ -1,4 +1,4 @@
-#include "User_UltrasonicrxTask.h"
+ #include "User_UltrasonicrxTask.h"
 #include "lvgl.h"
 #include "User_TasksInit.h"
 #include "Ultrasonic.h"
@@ -94,18 +94,21 @@ void UltrasonicReceive_Task(void *argument)
     while (1)
     {
         // 读取传感器的值
+        // if (Ultrasonic_GetRxFlag())
+        // {
+            // Ultrasonic_value = USART1_ReceiveByte();
+        // }
         if (Ultrasonic_GetRxFlag())
         {
-            Ultrasonic_value = Ultrasonic_Receive_Task();
-        }
-        if (Ultrasonic_value != 0)
-        {
+            Ultrasonic_value = Ultrasonic_GetRxData();
             sprintf(display_str, "Ultrasonic:%d", Ultrasonic_value);
-            LCD_ShowString(72, LCD_H / 2 - 20, display_str, BLUE, RED, 24, 0);
+            LCD_ShowString(30, LCD_H / 2 - 20, display_str, BLUE, RED, 24, 0);
         }
 
         // 使用互斥锁来保护LVGL操作
 
-        // vTaskDelay(100);
+        vTaskDelay(500);
     }
 }
+
+

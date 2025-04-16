@@ -3,9 +3,11 @@
 #include "user_gpio.h"
 #include "PWM1.h"
 #include "delay.h"
+#include "usart.h"
 uint8_t Ultrasonic_TxFlag = 0;
 uint8_t Ultrasonic_RxFlag = 0;
 uint8_t Ultrasonic_TxNum = 0;
+uint8_t Ultrasonic_RxNum = 0;
 
 
 void UltrasonicTX_Init(void)
@@ -95,7 +97,8 @@ void Ultrasonic_Send_Task(void)
 /* 接收端代码 */
 void UltrasonicRX_Init(void)
 {
-    User_GPIOA1_Init();
+    MX_USART1_UART_Init();
+    // User_GPIOA1_Init();
 }
 
 uint8_t UltrasonicRX_Get(void)
@@ -111,6 +114,11 @@ uint8_t Ultrasonic_GetRxFlag(void)
         return 1; // 则返回1，并自动清零标志位
     }
     return 0; // 如果标志位为0，则返回0
+}
+uint8_t Ultrasonic_GetRxData(void)
+{
+
+    return Ultrasonic_RxNum; // 如果标志位为0，则返回0
 }
 
 
@@ -167,12 +175,19 @@ uint8_t Ultrasonic_Receive_Task(void)
     }
 }
 
-void EXTI15_10_IRQHandler(void)
+// void EXTI15_10_IRQHandler(void)
+// {
+//     if (LL_EXTI_IsActiveFlag_0_31(LL_EXTI_LINE_10))
+//     {
+//         Ultrasonic_RxFlag = 1;
+//         LL_EXTI_ClearFlag_0_31(LL_EXTI_LINE_10); // 清除中断标志
+//         // 用户的中断处理代码
+//     }
+// }
+void USART1_IRQHandler(void)
 {
-    if (LL_EXTI_IsActiveFlag_0_31(LL_EXTI_LINE_10))
-    {
+    if(LL_USART_IsActiveFlag_RXNE(USART1)) {
+        Ultrasonic_RxNum = LL_USART_ReceiveData8(USART1); // 自动清除RXNE标志
         Ultrasonic_RxFlag = 1;
-        LL_EXTI_ClearFlag_0_31(LL_EXTI_LINE_10); // 清除中断标志
-        // 用户的中断处理代码
     }
 }

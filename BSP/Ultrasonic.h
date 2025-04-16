@@ -19,6 +19,7 @@ uint8_t UltrasonicRX_Get(void);
 uint8_t Ultrasonic_GetRxFlag(void);
 uint8_t Ultrasonic_Receive_State(void);
 uint8_t Ultrasonic_Receive_Task(void);
+uint8_t Ultrasonic_GetRxData(void);
 #endif
 
 #endif

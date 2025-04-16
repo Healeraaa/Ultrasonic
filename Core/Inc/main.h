@@ -43,7 +43,7 @@ extern "C" {
 #include "stm32f4xx_ll_adc.h"
 #include "stm32f4xx_ll_spi.h"
 
-#if 1
+#if 0
 #define UltrasonicTX 1
 #else
 #define UltrasonicRX 1
