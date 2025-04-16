@@ -1,0 +1,17 @@
+freertos\lv_bidi.o: ..\Middlewares\LVGL\GUI\lvgl\src\misc\lv_bidi.c
+freertos\lv_bidi.o: D:\Keil\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+freertos\lv_bidi.o: ..\Middlewares\LVGL\GUI\lvgl\src\misc\lv_bidi.h
+freertos\lv_bidi.o: ..\Middlewares\LVGL\GUI\lvgl\src\misc\../lv_conf_internal.h
+freertos\lv_bidi.o: D:\Keil\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+freertos\lv_bidi.o: ..\Middlewares\LVGL\GUI\lvgl\src\misc\../lv_conf_kconfig.h
+freertos\lv_bidi.o: ..\Middlewares\LVGL\GUI\lvgl\examples\porting\../../lv_conf.h
+freertos\lv_bidi.o: D:\Keil\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+freertos\lv_bidi.o: ..\Middlewares\LVGL\GUI\lvgl\src\misc\lv_txt.h
+freertos\lv_bidi.o: D:\Keil\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+freertos\lv_bidi.o: ..\Middlewares\LVGL\GUI\lvgl\src\misc\lv_area.h
+freertos\lv_bidi.o: ..\Middlewares\LVGL\GUI\lvgl\src\misc\../font/lv_font.h
+freertos\lv_bidi.o: ..\Middlewares\LVGL\GUI\lvgl\src\misc\../font/lv_symbol_def.h
+freertos\lv_bidi.o: ..\Middlewares\LVGL\GUI\lvgl\src\misc\lv_printf.h
+freertos\lv_bidi.o: ..\Middlewares\LVGL\GUI\lvgl\src\misc\lv_types.h
+freertos\lv_bidi.o: ..\Middlewares\LVGL\GUI\lvgl\src\misc\../misc/lv_mem.h
+freertos\lv_bidi.o: D:\Keil\Keil_v5\ARM\ARMCC\Bin\..\include\string.h

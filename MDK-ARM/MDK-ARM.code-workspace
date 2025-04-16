@@ -1,0 +1,38 @@
+{
+    "folders": [
+        {
+            "path": "."
+        },
+        {
+            "name": "Ultrasonic",
+            "path": ".."
+        }
+    ],
+    "settings": {
+        "files.associations": {
+            "user_gpio.h": "c",
+            "ultrasonic.h": "c",
+            "pwm1.h": "c",
+            "lv_conf.h": "c",
+            "user_tasksinit.h": "c",
+            "ui_mainstart.h": "c",
+            "oled.h": "c",
+            "atod.h": "c",
+            "user_ultrasonictxtask.h": "c",
+            "lv_switch.h": "c",
+            "lcd_init.h": "c",
+            "timer.h": "c",
+            "cstdint": "c",
+            "string": "c",
+            "array": "c",
+            "string_view": "c",
+            "span": "c",
+            "main.h": "c",
+            "freertos.h": "c",
+            "user_ultrasonicrxtask.h": "c",
+            "lcd.h": "c",
+            "led.h": "c"
+        }
+    },
+    "extensions": {}
+}

@@ -1,0 +1,16 @@
+freertos\lv_font.o: ..\Middlewares\LVGL\GUI\lvgl\src\font\lv_font.c
+freertos\lv_font.o: ..\Middlewares\LVGL\GUI\lvgl\src\font\lv_font.h
+freertos\lv_font.o: ..\Middlewares\LVGL\GUI\lvgl\src\font\../lv_conf_internal.h
+freertos\lv_font.o: D:\Keil\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+freertos\lv_font.o: ..\Middlewares\LVGL\GUI\lvgl\src\font\../lv_conf_kconfig.h
+freertos\lv_font.o: ..\Middlewares\LVGL\GUI\lvgl\examples\porting\../../lv_conf.h
+freertos\lv_font.o: D:\Keil\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+freertos\lv_font.o: D:\Keil\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+freertos\lv_font.o: ..\Middlewares\LVGL\GUI\lvgl\src\font\lv_symbol_def.h
+freertos\lv_font.o: ..\Middlewares\LVGL\GUI\lvgl\src\font\../misc/lv_area.h
+freertos\lv_font.o: ..\Middlewares\LVGL\GUI\lvgl\src\font\../misc/lv_utils.h
+freertos\lv_font.o: ..\Middlewares\LVGL\GUI\lvgl\src\font\../misc/lv_log.h
+freertos\lv_font.o: ..\Middlewares\LVGL\GUI\lvgl\src\font\../misc/lv_types.h
+freertos\lv_font.o: ..\Middlewares\LVGL\GUI\lvgl\src\font\../misc/lv_assert.h
+freertos\lv_font.o: ..\Middlewares\LVGL\GUI\lvgl\src\font\../misc/lv_mem.h
+freertos\lv_font.o: D:\Keil\Keil_v5\ARM\ARMCC\Bin\..\include\string.h

@@ -1,0 +1,16 @@
+freertos\gifdec.o: ..\Middlewares\LVGL\GUI\lvgl\src\extra\libs\gif\gifdec.c
+freertos\gifdec.o: ..\Middlewares\LVGL\GUI\lvgl\src\extra\libs\gif\gifdec.h
+freertos\gifdec.o: D:\Keil\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+freertos\gifdec.o: ..\Middlewares\LVGL\GUI\lvgl\src\extra\libs\gif\../../../misc/lv_fs.h
+freertos\gifdec.o: ..\Middlewares\LVGL\GUI\lvgl\src\extra\libs\gif\../../../misc/../lv_conf_internal.h
+freertos\gifdec.o: ..\Middlewares\LVGL\GUI\lvgl\src\extra\libs\gif\../../../misc/../lv_conf_kconfig.h
+freertos\gifdec.o: ..\Middlewares\LVGL\GUI\lvgl\examples\porting\../../lv_conf.h
+freertos\gifdec.o: D:\Keil\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+freertos\gifdec.o: ..\Middlewares\LVGL\GUI\lvgl\src\extra\libs\gif\../../../misc/lv_log.h
+freertos\gifdec.o: ..\Middlewares\LVGL\GUI\lvgl\src\extra\libs\gif\../../../misc/lv_types.h
+freertos\gifdec.o: ..\Middlewares\LVGL\GUI\lvgl\src\extra\libs\gif\../../../misc/lv_mem.h
+freertos\gifdec.o: D:\Keil\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+freertos\gifdec.o: D:\Keil\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+freertos\gifdec.o: ..\Middlewares\LVGL\GUI\lvgl\src\extra\libs\gif\../../../misc/lv_color.h
+freertos\gifdec.o: ..\Middlewares\LVGL\GUI\lvgl\src\extra\libs\gif\../../../misc/lv_assert.h
+freertos\gifdec.o: ..\Middlewares\LVGL\GUI\lvgl\src\extra\libs\gif\../../../misc/lv_math.h
